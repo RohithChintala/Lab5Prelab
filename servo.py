@@ -23,11 +23,11 @@ try:
   #while True:
     #for dc in range(dcMin,dcMax):
   for x in range(2):  
-    pwm.ChangeDutyCycle(3)
+    pwm.ChangeDutyCycle(3.4)
     print(3)
-    time.sleep(3)
-    pwm.ChangeDutyCycle(12)
-    print(1)
+    time.sleep(2)
+    pwm.ChangeDutyCycle(12.5)
+    print(12)
     time.sleep(3)
 except KeyboardInterrupt:
   print("closing")
