@@ -21,10 +21,13 @@ pwm.start(0)
 
 try:
   while True:
-    for dc in range(dcMin,dcMax):
-      pwm.ChangeDutyCycle(dc)
-      print(dc)
-      time.sleep(.02-(dc/1000))
+    #for dc in range(dcMin,dcMax):
+    pwm.ChangeDutyCycle(1)
+    print(1)
+    time.sleep(.5)
+    pwm.ChangeDutyCycle(14)
+    print(dc)
+    time.sleep(.5)
 except KeyboardInterrupt:
   print("closing")
 GPIO.cleanup()
