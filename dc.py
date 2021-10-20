@@ -9,8 +9,13 @@ pwm = GPIO.PWM(pwmPin, 2)
 pwm.start(0)
 
 
-for i in range(100): #increase i to 100
-  d = 100-i #defines d to decrease as i increases
-  pwm.ChangeDutyCycle(d) #decreases duty cycle with d
-  sleep(.02) 
-pwm.stop() 
+try:
+  while True:
+    for i in range(100): #increase i to 100
+      d = 100-i #defines d to decrease as i increases
+      pwm.ChangeDutyCycle(d) #decreases duty cycle with d
+      sleep(.02) 
+    pwm.stop() 
+except KeyboardInterrupt:
+  print("closing")
+GPIO.cleanup()
