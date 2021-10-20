@@ -26,7 +26,7 @@ try:
     print(1)
     time.sleep(.5)
     pwm.ChangeDutyCycle(14)
-    print(dc)
+    print(14)
     time.sleep(.5)
 except KeyboardInterrupt:
   print("closing")
