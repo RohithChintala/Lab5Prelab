@@ -20,14 +20,15 @@ pwm = GPIO.PWM(pwmPin, 50) # PWM object at 50 Hz (20 ms period)
 pwm.start(0)
 
 try:
-  while True:
+  #while True:
     #for dc in range(dcMin,dcMax):
+  for x in range(2):  
     pwm.ChangeDutyCycle(1)
     print(1)
     time.sleep(.5)
-    pwm.ChangeDutyCycle(14)
-    print(14)
-    time.sleep(.5)
+    #pwm.ChangeDutyCycle(14)
+    #print(14)
+    3time.sleep(.5)
 except KeyboardInterrupt:
   print("closing")
 GPIO.cleanup()
