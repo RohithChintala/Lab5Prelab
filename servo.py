@@ -25,10 +25,10 @@ try:
   for x in range(2):  
     pwm.ChangeDutyCycle(2)
     print(3)
-    time.sleep(2)
-    pwm.ChangeDutyCycle(12.8)
+    time.sleep(1.5)
+    pwm.ChangeDutyCycle(12)
     print(12)
-    time.sleep(3)
+    time.sleep(1.5)
 except KeyboardInterrupt:
   print("closing")
 GPIO.cleanup()
